@@ -1,0 +1,10 @@
+package com.xworkz.bag.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = "com.xworkz.bag")
+public class SpringBagConfiguration {
+
+}
