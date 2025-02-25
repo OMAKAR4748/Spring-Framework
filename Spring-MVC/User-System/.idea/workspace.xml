@@ -4,7 +4,158 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b8e2bff-c079-4d54-ba1a-ee68314d7dab" name="Changes" comment="" />
+    <list default="true" id="0b8e2bff-c079-4d54-ba1a-ee68314d7dab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/userapp/config/SpringConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/userapp/config/SpringWebInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/userapp/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/userapp/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/userapp/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/userapp/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/userapp/repository/UserRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/userapp/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Sign_up.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/getAllUser.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/response.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Bag/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-Bag/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-BankAccount/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-BankAccount/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-ElectricGuitar/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-ElectricGuitar/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-ElectricGuitar/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-ElectricGuitar/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/ElectricGuitarRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/ElectricGuitarRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/entity/ElectricGuitarEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/entity/ElectricGuitarEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/repositary/ElectricGuitarRepositary.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/repositary/ElectricGuitarRepositary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/repositary/ElectricGuitarRepositaryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/repositary/ElectricGuitarRepositaryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/service/ElectricGuitarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/service/ElectricGuitarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/service/ElectricGuitarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-ElectricGuitar/src/main/java/com/xworkz/electricGuitar/service/ElectricGuitarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Iron/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-Iron/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Iron/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-Iron/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/IronRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/dto/IronDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/dto/IronDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/entity/IronEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/entity/IronEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/repositary/IronRepositary.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/repositary/IronRepositary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/repositary/IronRepositaryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/repositary/IronRepositaryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/service/IronService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/service/IronService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/service/IronServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-Iron/src/main/java/com/xworkz/iron/service/IronServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Iron/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-Printer/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-Printer/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-VacuumCleaner/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-VacuumCleaner/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-VacuumCleaner/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-VacuumCleaner/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/VacuumCleanerRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/dto/VacuumCleanerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/dto/VacuumCleanerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/entity/VacuumCleanerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/entity/VacuumCleanerEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/repositary/VacuumCleanerRepositary.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/repositary/VacuumCleanerRepositary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/repositary/VacuumCleanerRepositaryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/repositary/VacuumCleanerRepositaryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/service/VacuumCleanerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/service/VacuumCleanerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/service/VacuumCleanerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/main/java/com/xworkz/vacuumCleaner/service/VacuumCleanerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-VacuumCleaner/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-WashingMachine/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-WashingMachine/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-WaterPurifier/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-WaterPurifier/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/WaterPurifierRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/WaterPurifierRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/entity/WaterPurifierEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/entity/WaterPurifierEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/repositary/WaterPurifierRepositary.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/repositary/WaterPurifierRepositary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/repositary/WaterPurifierRepositaryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/repositary/WaterPurifierRepositaryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/service/WaterPurifierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/service/WaterPurifierService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/service/WaterPurifierServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-WaterPurifier/src/main/java/com/xworkz/waterPurifier/service/WaterPurifierServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-data/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/CountryRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/CountryRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/entity/CountryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/entity/CountryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/repositary/CountryRepositary.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/repositary/CountryRepositary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/repositary/CountryRepositaryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/repositary/CountryRepositaryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/service/CountryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/service/CountryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/service/CountryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-data/src/main/java/com/xworkz/dataapp/service/CountryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring-student/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring-student/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-Laptop/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-Laptop/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-Mobile/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-Mobile/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-employee/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-employee/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-hotel/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-hotel/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-watch/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-watch/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/StandRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/AirConditioner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Bag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/BankAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Bicycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Bus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Camera.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Chair.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Charger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Elevator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Fan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Fridge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/House.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Laptop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/MicrowaveOven.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Mobile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/MusicPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Pg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Refrigeretor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Restaurant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Stand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/TV.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Train.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/Watch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/beans/WaterBottel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-Example/src/main/java/com/xworkz/core/config/SpringConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/src/main/java/com/xworkz/laptopDetails/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/src/main/java/com/xworkz/laptopDetails/config/springConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/src/main/java/com/xworkz/laptopDetails/dto/LaptopDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/src/main/java/com/xworkz/laptopDetails/entity/LaptopEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/src/main/java/com/xworkz/laptopDetails/repository/LaptopRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/src/main/java/com/xworkz/laptopDetails/repository/LaptopRepoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/src/main/java/com/xworkz/laptopDetails/service/LaptopService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/src/main/java/com/xworkz/laptopDetails/service/LaptopServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-core-example1/src/test/java/com/xworkz/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/CountryRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/beans/Country.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/beans/Dish.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/beans/House.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/beans/Husband.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/beans/Laptop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/beans/Library.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/beans/Mobile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/beans/Patient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/beans/TV.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/beans/Theatre.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/config/SpringCountry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/politician/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/politician/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/politician/HardDisk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/politician/Ingrediance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/politician/Movie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/politician/Politician.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/politician/Room.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/politician/SimCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/politician/Stand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-country/src/main/java/com/xworkz/countryapp/politician/Wife.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,9 +184,16 @@
     "accountId": "2556b259-68d1-4522-96c2-7f3787464fd5"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2tWJPaTkdAmSU6cJG0JQjtW6ld5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,22 +203,23 @@
   "keyToString": {
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Smart Tomcat.Tomcat: User-System.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Github/Spring-Framework/IOC-Examples",
+    "last_opened_file_path": "D:/Github/Spring-Frameworks/IOC-Examples/User-System",
     "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="User-System" type="com.poratu.idea.plugins.tomcat">
+    <configuration name="Tomcat: User-System" type="com.poratu.idea.plugins.tomcat" temporary="true">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
       <predefined_log_file id="Tomcat Catalina Log" />
       <predefined_log_file id="Tomcat Manager Log" />
       <predefined_log_file id="Tomcat Host Manager Log" />
-      <option name="catalinaBase" value="D:\Github\Spring-Framework\IOC-Examples" />
-      <option name="contextPath" value="" />
-      <option name="docBase" value="D:\Github\Spring-Framework\IOC-Examples" />
+      <option name="catalinaBase" value="" />
+      <option name="contextPath" value="/User-System" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
       <option name="envOptions">
         <map />
       </option>
@@ -78,6 +237,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Smart Tomcat.Tomcat: User-System" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
