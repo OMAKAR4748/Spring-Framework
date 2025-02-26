@@ -1,26 +1,28 @@
+
 package com.xworkz.userapp.entity;
 
-import lombok.*;
-import org.springframework.stereotype.Component;
+import lombok.Data;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
-@Table(name = "user_details")
-@NamedQuery(name = "getAllUser",query = "select u from UserEntity u")
-@NamedQuery(name = "deleteById", query = "delete from UserEntity u where u.id=:id")
-@NamedQuery(name = "UpdateData",query = "UPDATE UserEntity u SET u.firstName = :firstName, u.lastName = :lastName, u.email = :email, u.phoneNumber = :phoneNumber WHERE u.id = :id")
-@Component
+@Table(name = "User_Information")
+@Data
+
+@NamedQuery(name = "findAll", query = "SELECT u FROM UserEntity u")
+@NamedQuery(name="deleteUser", query = "Delete From UserEntity where id = :id")
+@NamedQuery(name = "findById", query = "select u From UserEntity u where u.id = :id")
 public class UserEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String firstName;
+
     private String lastName;
+
     private String email;
+
     private Long phoneNumber;
 }

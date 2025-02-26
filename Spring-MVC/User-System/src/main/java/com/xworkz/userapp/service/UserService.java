@@ -1,16 +1,21 @@
+
 package com.xworkz.userapp.service;
 
 import com.xworkz.userapp.dto.UserDto;
+import com.xworkz.userapp.entity.UserEntity;
+
+
 import java.util.List;
 
 public interface UserService {
-    boolean saveUser(UserDto dto);
 
-    List<UserDto> getAllUser();
+    boolean validateAndSave(UserDto userFormDto);
 
-    String deleteUserById(Integer id);
+    List<UserDto> getAll();
 
-    void updateUser(UserDto dto);
+    void deleteUserById(int id);
 
+    UserEntity findById(Integer id);
 
+    boolean updateUser(UserDto userFormDto);
 }

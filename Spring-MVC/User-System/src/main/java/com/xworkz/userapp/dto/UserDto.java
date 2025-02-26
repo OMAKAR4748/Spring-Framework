@@ -1,16 +1,23 @@
+
 package com.xworkz.userapp.dto;
 
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
-@ToString
 public class UserDto {
+
     private Integer id;
+
     private String firstName;
+
     private String lastName;
+
     private String email;
+
     private Long phoneNumber;
+
+    public UserDto(Integer id, String firstName, String lastName, String email, Long phoneNumber) {
+    }
 }

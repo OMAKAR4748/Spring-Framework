@@ -1,96 +1,66 @@
+
 package com.xworkz.userapp.repository;
 
 import com.xworkz.userapp.entity.UserEntity;
+
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
 import java.util.List;
-import java.util.Optional;
 
 @Repository
-public class UserRepositoryImpl implements UserRepository{
-
+public class UserRepositoryImpl implements UserRepository {
 
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("ecommerce");
 
 
+
     @Override
-    public boolean save(UserEntity entity) {
+    public boolean save(UserEntity userEntity) {
+
         EntityManager em = emf.createEntityManager();
-        EntityTransaction et = em.getTransaction();
-
-        try {
-            et.begin();
-            em.persist(entity);
-            et.commit();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            et.rollback();
-        }finally {
-            em.close();
-        }
-        return false;
+        em.getTransaction().begin();
+        em.persist(userEntity);
+        em.getTransaction().commit();
+        em.close();
+        return true;
     }
 
     @Override
-    public List<UserEntity> getAllUser() {
+    public List<UserEntity> getAll() {
         EntityManager em = emf.createEntityManager();
-        List<UserEntity> users = em.createNamedQuery("getAllUser").getResultList();
-        System.out.println(users);
-        return users;
+
+        return emf.createEntityManager().createNamedQuery("findAll").getResultList();
     }
 
     @Override
-    public String deleteUserById(Integer id) {
+    public void deleteUserById(int id) {
         EntityManager em = emf.createEntityManager();
-        EntityTransaction et = em.getTransaction();
+        em.getTransaction().begin();
+        em.createNamedQuery("deleteUser").setParameter("id", id).executeUpdate();
+        em.getTransaction().commit();
 
-        try {
-            et.begin();
-            UserEntity user = em.find(UserEntity.class, id);
-            if (user != null) {
-                em.remove(user);
-            }
-            et.commit();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            et.rollback();
-        } finally {
-            em.close();
-        }
-
-        return null;
     }
 
     @Override
-    public void updateUser(UserEntity updatedUser) {
-        EntityManager entityManager = emf.createEntityManager();
-        UserEntity user = entityManager.find(UserEntity.class, updatedUser.getId());
-        if (user != null) {
-            user.setFirstName(updatedUser.getFirstName());
-            user.setLastName(updatedUser.getLastName());
-            user.setEmail(updatedUser.getEmail());
-            user.setPhoneNumber(updatedUser.getPhoneNumber());
-            entityManager.merge(user);
-        }
+    public UserEntity findById(Integer id) {
+        EntityManager em = emf.createEntityManager();
+        Query query = em.createNamedQuery("findById").setParameter("id", id);
+        System.out.println("Repo :" + query.getSingleResult());
+        return (UserEntity) query.getSingleResult();
     }
 
     @Override
-    public Optional<UserEntity> updateUserById(int id, String firstName, String lastName, String email, Long phoneNumber) {
-        EntityManager entityManager = emf.createEntityManager();
-        UserEntity user = entityManager.find(UserEntity.class, id);
-        if (user == null) {
-            throw new NullPointerException("User not found for ID: " + id);
-        }
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
-        user.setEmail(email);
-        user.setPhoneNumber(phoneNumber);
-        entityManager.merge(user);
-        return null;
-    }
+    public boolean updateUser(UserEntity userFormEntity) {
 
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        UserEntity userFormEntitys = em.find(UserEntity.class, userFormEntity.getId());
+        if (userFormEntitys != null) {
+            em.merge(userFormEntity);
+            em.getTransaction().commit();
+        }
+        em.close();
+        return true;
+    }
 }

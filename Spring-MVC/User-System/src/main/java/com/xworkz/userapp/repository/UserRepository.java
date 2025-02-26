@@ -1,20 +1,21 @@
+
 package com.xworkz.userapp.repository;
 
 import com.xworkz.userapp.entity.UserEntity;
 
+
 import java.util.List;
-import java.util.Optional;
 
 public interface UserRepository {
-    boolean save(UserEntity entity);
 
-    List<UserEntity> getAllUser();
+    boolean save(UserEntity userEntity);
 
-    String deleteUserById(Integer id);
+    List<UserEntity> getAll() ;
 
-    void updateUser(UserEntity updatedUser);
+    void deleteUserById(int id);
 
-    Optional<UserEntity> updateUserById(int id, String firstName, String lastName, String email, Long phoneNumber);
+    UserEntity findById(Integer id);
 
+    boolean updateUser(UserEntity userFormEntity);
 
 }
