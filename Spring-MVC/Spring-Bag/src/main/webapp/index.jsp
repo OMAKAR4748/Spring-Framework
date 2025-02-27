@@ -32,9 +32,10 @@
 <body>
 
     <nav>
+        <li><a href="#">Home</a></li>
         <li><a href="Sign_up.jsp">Sign Up</a></li>
-        <li><a href="viewAll">View All Users</a></li>
-        <li><a href="updateUser">Update User</a></li>
+        <li><a href="getAll">View All</a></li>
+        <li><a href="updatePage.jsp">Update</a></li>
     </nav>
 
 </body>

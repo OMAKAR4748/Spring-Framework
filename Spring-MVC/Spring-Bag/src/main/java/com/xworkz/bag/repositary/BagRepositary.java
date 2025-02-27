@@ -1,23 +1,20 @@
-package com.xworkz.bag.repository;
+package com.xworkz.bag.repositary;
 
 import com.xworkz.bag.entity.BagEntity;
+
 import java.util.List;
-import java.util.Optional;
 
-public interface BagRepository {
+public interface BagRepositary {
 
-    // Save a new bag entry
     boolean save(BagEntity entity);
 
-    // Retrieve all bags
     List<BagEntity> getAllBags();
 
-    // Delete a bag by ID
-    String deleteBagById(Integer id);
+    void deleteById(int id);
 
-    // Update an existing bag
-    void updateBag(BagEntity updatedBag);
+    BagEntity findById(Integer id);
 
-    // Update bag details by ID
-    Optional<BagEntity> updateBagById(int id, String brand, String color, Integer capacity, Integer price);
+    boolean updateBag(BagEntity updatedBag);
+
+
 }

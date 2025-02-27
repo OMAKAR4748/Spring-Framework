@@ -1,32 +1,61 @@
 package com.xworkz.bag.repositary;
 
 import com.xworkz.bag.entity.BagEntity;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
+import java.util.List;
 
-@Component
+@Repository
 public class BagRepositaryImpl implements BagRepositary{
+
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("ecommerce");
+
     @Override
     public boolean save(BagEntity entity) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ecommerce");
         EntityManager em = emf.createEntityManager();
-        EntityTransaction et = em.getTransaction();
-
-        try {
-            et.begin();
-            em.persist(entity);
-            et.commit();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            et.rollback();
-        } finally {
-            emf.close();
-            em.close();
-        }
-        return false;
+        em.getTransaction().begin();
+        em.persist(entity);
+        em.getTransaction().commit();
+        em.close();
+        return true;
     }
+
+    @Override
+    public List<BagEntity> getAllBags() {
+        EntityManager em = emf.createEntityManager();
+        return emf.createEntityManager().createNamedQuery("getAllBags").getResultList();
+    }
+
+    @Override
+    public void deleteById(int id) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        em.createNamedQuery("deleteBag").setParameter("id", id).executeUpdate();
+        em.getTransaction().commit();
+
+    }
+
+    @Override
+    public BagEntity findById(Integer id) {
+        EntityManager em = emf.createEntityManager();
+        Query query = em.createNamedQuery("findById").setParameter("id", id);
+        return (BagEntity) query.getSingleResult();
+
+    }
+
+    @Override
+    public boolean updateBag(BagEntity updatedBag) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        BagEntity entity = em.find(BagEntity.class, updatedBag.getId());
+        if (entity != null) {
+            em.merge(entity);
+            em.getTransaction().commit();
+        }
+        em.close();
+        return true;
+    }
+
+
 }

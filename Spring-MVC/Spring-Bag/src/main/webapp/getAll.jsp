@@ -51,6 +51,7 @@
         a {
             color: blue;
             text-decoration: none;
+
         }
 
         a:hover {
@@ -63,22 +64,22 @@
     <table border="2">
         <tr>
             <th>Sl.No</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Phone</th>
+            <th>Brand</th>
+            <th>Color</th>
+            <th>Capacity</th>
+            <th>Price</th>
             <th>Action</th>
         </tr>
-        <c:forEach var="dto" items="${listOfUser}">
+        <c:forEach var="item" items="${list}">
             <tr>
-                <td>${dto.id}</td>
-                <td>${dto.firstName}</td>
-                <td>${dto.lastName}</td>
-                <td>${dto.email}</td>
-                <td>${dto.phoneNumber}</td>
+                <td>${item.id}</td>
+                <td>${item.brand}</td>
+                <td>${item.color}</td>
+                <td>${item.capacity}</td>
+                <td>${item.price}</td>
                 <td>
-                     <a href="delete?id=${dto.id}">Delete</a>
-                     &nbsp <a href="fetchUser?id=${dto.id}">Edit</a>
+                   <a href="deleteBag?id=${item.id}"><i class="bi bi-trash3"></i></a> &nbsp;
+                   <a href="editBag?id=${item.id}"><i class="bi bi-pencil-square"></i></a>
                 </td>
             </tr>
         </c:forEach>

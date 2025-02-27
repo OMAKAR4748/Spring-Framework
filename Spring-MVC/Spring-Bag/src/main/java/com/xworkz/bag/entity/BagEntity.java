@@ -11,6 +11,10 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "Bag")
+
+@NamedQuery(name = "getAllBags",query = "select u from BagEntity u")
+@NamedQuery(name="deleteBag", query = "Delete From BagEntity where id = :id")
+@NamedQuery(name = "findById", query = "select u From BagEntity u where u.id = :id")
 public class BagEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

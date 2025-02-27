@@ -1,26 +1,24 @@
+<%@ page isELIgnored = "false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration</title>
+    <title>Bag Details</title>
     <style>body {
                font-family: Arial, sans-serif;
                background-color: #f4f4f4;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               height: 100vh;
-               margin: 0;
+               text-align: center;
            }
 
            .container {
+               width: 40%;
+               margin: 50px auto;
                background: white;
                padding: 20px;
-               border-radius: 10px;
-               box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-               width: 300px;
-               text-align: center;
+               box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+               border-radius: 8px;
            }
 
            h2 {
@@ -30,25 +28,29 @@
            form {
                display: flex;
                flex-direction: column;
+               align-items: center;
            }
 
            label {
-               text-align: left;
-               font-weight: bold;
+               font-size: 16px;
                margin-top: 10px;
+               display: block;
+               text-align: left;
+               width: 100%;
            }
 
            input {
-               padding: 8px;
-               margin-top: 5px;
+               width: 90%;
+               padding: 10px;
+               margin: 5px 0;
                border: 1px solid #ccc;
                border-radius: 5px;
            }
 
            button {
                margin-top: 15px;
-               padding: 10px;
-               background-color: #28a745;
+               padding: 10px 15px;
+               background-color: #007BFF;
                color: white;
                border: none;
                border-radius: 5px;
@@ -57,30 +59,29 @@
            }
 
            button:hover {
-               background-color: #218838;
+               background-color: #0056b3;
            }
 </style>
-
 </head>
 <body>
     <div class="container">
-        <h2>User Registration</h2>
-        <form action="addUser" method="POST" target="_blank">
+        <h2>Bag Details</h2>
+        <form action="addBags" method="post" target="_blank">
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" name="brand" required><br>
 
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color" required><br>
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
+            <label for="capacity">Capacity:</label>
+            <input type="number" id="capacity" name="capacity" required><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" required><br>
 
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="number" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
-
-            <button type="submit">Register</button>
+            <button type="submit">Submit</button>
         </form>
+        <a href="getAll" class="view-link">View All</a>
     </div>
 </body>
 </html>
