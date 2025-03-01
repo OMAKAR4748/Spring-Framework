@@ -3,6 +3,7 @@ package com.xworkz.userapp.repository;
 
 import com.xworkz.userapp.entity.UserEntity;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
@@ -11,13 +12,11 @@ import java.util.List;
 @Repository
 public class UserRepositoryImpl implements UserRepository {
 
-    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("ecommerce");
-
-
+    @Autowired
+    EntityManagerFactory emf;
 
     @Override
     public boolean save(UserEntity userEntity) {
-
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.persist(userEntity);
@@ -29,7 +28,6 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public List<UserEntity> getAll() {
         EntityManager em = emf.createEntityManager();
-
         return emf.createEntityManager().createNamedQuery("findAll").getResultList();
     }
 
@@ -50,9 +48,9 @@ public class UserRepositoryImpl implements UserRepository {
         return (UserEntity) query.getSingleResult();
     }
 
+
     @Override
     public boolean updateUser(UserEntity userFormEntity) {
-
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         UserEntity userFormEntitys = em.find(UserEntity.class, userFormEntity.getId());

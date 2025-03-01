@@ -59,29 +59,32 @@
     </style>
 </head>
 <body>
-    <h1>Registered Users</h1>
+    <h1>List Of Users</h1>
     <table border="2">
         <tr>
             <th>Sl.No</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Phone</th>
+            <th>Account Number</th>
+            <th>AccountHolder Name</th>
+            <th>Balance</th>
+            <th>Account Type</th>
             <th>Action</th>
         </tr>
-        <c:forEach var="dto" items="${listOfUser}">
+
+        <c:forEach var="item" items="${list}">
             <tr>
-                <td>${dto.id}</td>
-                <td>${dto.firstName}</td>
-                <td>${dto.lastName}</td>
-                <td>${dto.email}</td>
-                <td>${dto.phoneNumber}</td>
+                <td>${item.id}</td>
+                <td>${item.accountNumber}</td>
+                <td>${item.accountHolderName}</td>
+                <td>${item.balance}</td>
+                <td>${item.accountType}</td>
                 <td>
-                     <a href="delete?id=${dto.id}">Delete</a>
-                     &nbsp <a href="fetchUser?id=${dto.id}">Edit</a>
+                     <a href="deleteUser?id=${item.id}">Delete</a>
+                     &nbsp <a href="editUser?id=${item.id}">Edit</a>
                 </td>
             </tr>
         </c:forEach>
     </table>
+
+    <a href="index.jsp">GO TO HOME</a>
 </body>
 </html>

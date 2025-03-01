@@ -109,8 +109,12 @@
     </style>
 </head>
 <body>
+
+       <h2>${msg}</h2>
     <form action="updateData" method="post" class="update-form">
         <h2>Update Your Details</h2>
+
+        <h2>${msg}
 
         <input type="hidden" value="${item.id}" name="id"/>
 
@@ -131,7 +135,7 @@
 
         <div class="form-group">
             <label for="phoneNumber">Phone Number</label>
-            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" value="${item.phoneNumber}" required>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" value="${item.phoneNumber}" pattern="[0-9]{10}" required>
         </div>
 
         <input type="submit" value="Update">

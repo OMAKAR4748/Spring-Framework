@@ -29,8 +29,8 @@ public class UserServiceImpl implements UserService {
         userFormEntity.setLastName(userDto.getLastName());
         userFormEntity.setEmail(userDto.getEmail());
         userFormEntity.setPhoneNumber(userDto.getPhoneNumber());
-
         userRepository.save(userFormEntity);
+
         return true;
     }
 
@@ -42,15 +42,15 @@ public class UserServiceImpl implements UserService {
             UserDto dto = new UserDto();
             BeanUtils.copyProperties(entity, dto);
             userDtos.add(dto);
+
         }
-
-
         return userDtos;
     }
 
     @Override
     public void deleteUserById(int id) {
         userRepository.deleteUserById(id);
+
     }
 
     @Override
@@ -60,11 +60,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean updateUser(UserDto userFormDto) {
+    public boolean updateUser(UserDto userDto) {
+        boolean isUpdated = false;
         UserEntity userEntity = new UserEntity();
-        BeanUtils.copyProperties(userFormDto, userEntity);
+        if (userDto != null) {
+            BeanUtils.copyProperties(userDto, userEntity);
 
-        userRepository.updateUser(userEntity);
-        return true;
+            isUpdated = userRepository.updateUser(userEntity);
+        }
+        return isUpdated;
     }
 }

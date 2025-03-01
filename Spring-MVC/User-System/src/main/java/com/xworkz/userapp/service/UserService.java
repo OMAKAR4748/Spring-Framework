@@ -17,5 +17,5 @@ public interface UserService {
 
     UserEntity findById(Integer id);
 
-    boolean updateUser(UserDto userFormDto);
+    boolean updateUser(UserDto userDto);
 }

@@ -61,8 +61,12 @@ public class UserController {
 
     @RequestMapping("updateData")
     public String updateUser(UserDto dto, Model model){
-        userFormService.updateUser(dto);
-        model.addAttribute("name", dto.getFirstName());
+        boolean updateUser =  userFormService.updateUser(dto);
+        if(updateUser) {
+            model.addAttribute("msg", "User data Updated Successfully..!");
+        }else {
+            model.addAttribute("msg","User data Updated failure");
+        }
         return "updateResponse.jsp";
     }
 }

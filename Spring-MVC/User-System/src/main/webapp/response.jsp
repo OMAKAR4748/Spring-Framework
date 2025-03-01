@@ -120,7 +120,7 @@
     <div class="response-container">
         <h2>THANK YOU ${name}</h2>
         <H3><i class="bi bi-check2-circle"></i> REGISTRED SUCCESSFUL...!<i class="bi bi-check2-circle"></i></H3>
-        <a href="index.jsp" class="back-link">Go to home</a>
+        <a href="Sign_up.jsp" class="back-link">Go to home</a>
     </div>
 </body>
 

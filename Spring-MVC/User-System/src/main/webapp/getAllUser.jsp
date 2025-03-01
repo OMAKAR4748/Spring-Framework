@@ -126,6 +126,11 @@
         }
     }
 
+    h6{
+    margin:0;
+    padding:0;
+    }
+
 
     </style>
 </head>
