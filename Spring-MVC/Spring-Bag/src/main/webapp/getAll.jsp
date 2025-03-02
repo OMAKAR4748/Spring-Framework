@@ -60,7 +60,7 @@
     </style>
 </head>
 <body>
-    <h1>Registered Users</h1>
+    <h1>List of Bag Details</h1>
     <table border="2">
         <tr>
             <th>Sl.No</th>
@@ -78,8 +78,8 @@
                 <td>${item.capacity}</td>
                 <td>${item.price}</td>
                 <td>
-                   <a href="deleteBag?id=${item.id}"><i class="bi bi-trash3"></i></a> &nbsp;
-                   <a href="editBag?id=${item.id}"><i class="bi bi-pencil-square"></i></a>
+                   <a href="deleteBag?id=${item.id}"><i class="bi bi-trash3">Delete</i></a> &nbsp;
+                   <a href="editBag?id=${item.id}"><i class="bi bi-pencil-square">Edit</i></a>
                 </td>
             </tr>
         </c:forEach>

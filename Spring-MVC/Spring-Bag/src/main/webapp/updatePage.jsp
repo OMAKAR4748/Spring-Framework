@@ -67,6 +67,7 @@
 </head>
 <body>
     <div class="container">
+        <h2>${msg}</h2>
         <h2>Update Details</h2>
         <form action="updateData" method="POST">
             <input type="hidden" id="id" name="id" value="${item.id}">

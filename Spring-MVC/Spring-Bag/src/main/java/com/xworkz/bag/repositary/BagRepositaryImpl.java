@@ -1,6 +1,7 @@
 package com.xworkz.bag.repositary;
 
 import com.xworkz.bag.entity.BagEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
@@ -9,7 +10,8 @@ import java.util.List;
 @Repository
 public class BagRepositaryImpl implements BagRepositary{
 
-    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("ecommerce");
+    @Autowired
+    EntityManagerFactory emf;
 
     @Override
     public boolean save(BagEntity entity) {

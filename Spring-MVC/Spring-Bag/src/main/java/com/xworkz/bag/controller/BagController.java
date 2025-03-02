@@ -61,7 +61,7 @@ public class BagController {
     @RequestMapping("updateData")
     public String updateBag(BagDto dto, Model model){
         bagService.updateBag(dto);
-        model.addAttribute("brand", dto.getBrand());
+        model.addAttribute("msg","Data Updated Successfully..");
         return "updateResponse.jsp";
     }
 
