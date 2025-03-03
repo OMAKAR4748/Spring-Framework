@@ -23,13 +23,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean validateAndSave(UserDto userDto) {
 
-        UserEntity userFormEntity = new UserEntity();
+        UserEntity userEntity = new UserEntity();
 
-        userFormEntity.setFirstName(userDto.getFirstName());
-        userFormEntity.setLastName(userDto.getLastName());
-        userFormEntity.setEmail(userDto.getEmail());
-        userFormEntity.setPhoneNumber(userDto.getPhoneNumber());
-        userRepository.save(userFormEntity);
+        userEntity.setFirstName(userDto.getFirstName());
+        userEntity.setLastName(userDto.getLastName());
+        userEntity.setEmail(userDto.getEmail());
+        userEntity.setPhoneNumber(userDto.getPhoneNumber());
+        userRepository.save(userEntity);
 
         return true;
     }

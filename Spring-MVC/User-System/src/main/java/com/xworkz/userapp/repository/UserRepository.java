@@ -16,6 +16,6 @@ public interface UserRepository {
 
     UserEntity findById(Integer id);
 
-    boolean updateUser(UserEntity userFormEntity);
+    boolean updateUser(UserEntity userEntity);
 
 }

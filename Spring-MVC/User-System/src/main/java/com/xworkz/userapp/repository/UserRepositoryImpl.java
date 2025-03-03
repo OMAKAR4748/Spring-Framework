@@ -50,12 +50,12 @@ public class UserRepositoryImpl implements UserRepository {
 
 
     @Override
-    public boolean updateUser(UserEntity userFormEntity) {
+    public boolean updateUser(UserEntity userEntity) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        UserEntity userFormEntitys = em.find(UserEntity.class, userFormEntity.getId());
-        if (userFormEntitys != null) {
-            em.merge(userFormEntity);
+        UserEntity userEntitys = em.find(UserEntity.class, userEntity.getId());
+        if (userEntitys != null) {
+            em.merge(userEntity);
             em.getTransaction().commit();
         }
         em.close();

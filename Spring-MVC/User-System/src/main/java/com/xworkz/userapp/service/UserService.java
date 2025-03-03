@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface UserService {
 
-    boolean validateAndSave(UserDto userFormDto);
+    boolean validateAndSave(UserDto userDto);
 
     List<UserDto> getAll();
 
