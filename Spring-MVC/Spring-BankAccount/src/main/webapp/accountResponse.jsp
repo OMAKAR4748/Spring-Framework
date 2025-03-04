@@ -12,6 +12,7 @@
     </style>
 </head>
 <body>
-    <h1>Thank you ${name} for registering..!</h1>
+    <h1>Thank you for registering..!</h1>
+    <a href="index.jsp">GO TO HOME</a>
 </body>
 </html>

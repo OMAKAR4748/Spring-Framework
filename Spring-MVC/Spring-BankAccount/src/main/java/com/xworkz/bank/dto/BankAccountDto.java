@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BackAccountDto {
+public class BankAccountDto {
     private Integer id;
     private double accountNumber;
     private String accountHolderName;

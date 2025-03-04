@@ -1,25 +1,67 @@
 package com.xworkz.bank.service;
 
-import com.xworkz.bank.dto.BackAccountDto;
+import com.xworkz.bank.dto.BankAccountDto;
 import com.xworkz.bank.entity.BankAccountEntity;
-import com.xworkz.bank.repositary.BankAccountRepositary;
+import com.xworkz.bank.repositary.BankAccountRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
-public class BankAccountServiceImpl implements BankAccountService{
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class BankAccountServiceImpl implements BankAccountService {
 
     @Autowired
-    BankAccountRepositary bankAccountRepositary;
+    private BankAccountRepository bankAccountRepository;
 
     @Override
-    public boolean validateAndSave(BackAccountDto dto) {
-        BankAccountEntity entity = new BankAccountEntity();
-        BeanUtils.copyProperties(dto,entity);
-        System.out.println(entity);
-        boolean saved = bankAccountRepositary.save(entity);
-        System.out.println("Data is Saved");
-        return saved;
+    public boolean addAccount(BankAccountDto dto) {
+
+        BankAccountEntity bankEntity = new BankAccountEntity();
+
+        bankEntity.setAccountNumber(bankEntity.getAccountNumber());
+        bankEntity.setAccountHolderName(bankEntity.getAccountHolderName());
+        bankEntity.setBalance(bankEntity.getBalance());
+        bankEntity.setAccountType(bankEntity.getAccountType());
+
+        bankAccountRepository.save(bankEntity);
+
+        return true;
     }
+
+    @Override
+    public List<BankAccountDto> fetchAllAccounts() {
+        List<BankAccountDto> dtos = new ArrayList<>();
+        List<BankAccountEntity> entities = bankAccountRepository.getAllAccounts();
+        for (BankAccountEntity bankEntity :entities)
+        {
+            BankAccountDto dto = new BankAccountDto();
+            BeanUtils.copyProperties(bankEntity, dto);
+            dtos.add(dto);
+        }
+        return dtos;
+    }
+
+
+    @Override
+    public void removeAccountById(int id) {
+        bankAccountRepository.deleteAccountById(id);
+
+    }
+
+    @Override
+    public BankAccountEntity fetchAccountById(Integer id) {
+        return bankAccountRepository.getAccountById(id);
+    }
+
+    @Override
+    public boolean modifyAccount(BankAccountDto bankAccountDto) {
+        BankAccountEntity entity = new BankAccountEntity();
+        BeanUtils.copyProperties(bankAccountDto,entity);
+        bankAccountRepository.updateAccount(entity);
+        return true;
+    }
+
 }

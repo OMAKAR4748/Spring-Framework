@@ -1,3 +1,5 @@
+<%@ page isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,21 +69,26 @@
     <div class="container">
         <h2>Update User Details</h2>
         <form action="updateUser" method="POST">
-            <input type="hidden" id="id" name="id" value="${dto.id}">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" value="${dto.firstName}" required>
+            <input type="hidden" id="id" name="id" value="${item.id}">
+            <label for="accountNumber">Account Number:</label>
+            <input type="text" id="accountNumber" name="accountNumber" value="${item.accountNumber}" pattern="{11}" required>
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" value="${dto.lastName}" required>
+            <label for="accountHolderName">Account Holder Name:</label>
+            <input type="text" id="accountHolderName" name="accountHolderName" value="${item.accountHolderName}" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="${dto.email}" required>
+            <label for="balance">Balance:</label>
+            <input type="text" id="balance" name="balance" value="${item.balance}" required>
 
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" value="${dto.phoneNumber}" required>
-
+            <label for="accountType">Account Type:</label>
+            <select id="accountType" name="accountType" value="${item.accountType}" required>
+                   <option value="#"></option>
+                   <option value="Savings">Savings</option>
+                   <option value="Current">Current</option>
+            </select><br>
             <button type="submit">Update</button>
         </form>
+
+        <a href="viewAll" class="view-link">List Of Users</a>
 
     </div>
 </body>

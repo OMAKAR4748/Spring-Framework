@@ -3,18 +3,17 @@ package com.xworkz.bank.repositary;
 import com.xworkz.bank.entity.BankAccountEntity;
 
 import java.util.List;
-import java.util.Optional;
 
-public interface BankAccountRepositary {
+public interface BankAccountRepository {
+
     boolean save(BankAccountEntity entity);
 
     List<BankAccountEntity> getAllAccounts();
 
-    Optional<BankAccountEntity> getAccountById(Integer id);
+    void deleteAccountById(int id);
 
-    String deleteAccountById(Integer id);
+    BankAccountEntity getAccountById(Integer id);
 
-    void updateAccount(BankAccountEntity updatedAccount);
+    boolean updateAccount(BankAccountEntity updatedAccount);
 
-    Optional<BankAccountEntity> updateAccountById(Integer id, double accountNumber, String accountHolderName, double balance, String accountType);
 }

@@ -1,16 +1,16 @@
 package com.xworkz.bank.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
-@Table(name = "BankAccount_Info")
+@Table(name = "BankAccount_info")
+
+@NamedQuery(name = "getAllUser",query = "SELECT b FROM BankAccountEntity b")
+@NamedQuery(name = "deleteById",query = "delete from BankAccountEntity u where u.id=:id")
+@NamedQuery(name = "findById",query = "select u from BankAccountEntity u where u.id=:id")
 public class BankAccountEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

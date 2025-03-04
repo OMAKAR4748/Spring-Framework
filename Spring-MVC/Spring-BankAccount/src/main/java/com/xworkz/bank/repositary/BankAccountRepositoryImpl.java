@@ -1,69 +1,58 @@
-package com.xworkz.bank.repository;
+package com.xworkz.bank.repositary;
 
 import com.xworkz.bank.entity.BankAccountEntity;
-import com.xworkz.bank.repositary.BankAccountRepositary;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.transaction.Transactional;
+import javax.persistence.*;
 import java.util.List;
-import java.util.Optional;
 
 @Repository
-@Transactional
-public class BankAccountRepositoryImpl implements BankAccountRepositary {
+public class BankAccountRepositoryImpl implements BankAccountRepository {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+    @Autowired
+   EntityManagerFactory emf;
 
     @Override
     public boolean save(BankAccountEntity entity) {
-        if (entity != null) {
-            entityManager.persist(entity);
-            return true;
-        }
-        return false;
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        em.persist(entity);
+        em.getTransaction().commit();
+        em.close();
+        return true;
     }
 
     @Override
     public List<BankAccountEntity> getAllAccounts() {
-        return entityManager.createQuery("SELECT b FROM BankAccountEntity b", BankAccountEntity.class).getResultList();
+        EntityManager em = emf.createEntityManager();
+        return emf.createEntityManager().createNamedQuery("getAllUser").getResultList();
     }
 
     @Override
-    public Optional<BankAccountEntity> getAccountById(Integer id) {
-        return Optional.ofNullable(entityManager.find(BankAccountEntity.class, id));
+    public void deleteAccountById(int id) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        em.createNamedQuery("deleteById").setParameter("id", id).executeUpdate();
+        em.getTransaction().commit();
     }
 
     @Override
-    public String deleteAccountById(Integer id) {
-        BankAccountEntity account = entityManager.find(BankAccountEntity.class, id);
-        if (account != null) {
-            entityManager.remove(account);
-            return "Account deleted successfully";
-        }
-        return "Account not found";
+    public BankAccountEntity getAccountById(Integer id) {
+        EntityManager em = emf.createEntityManager();
+        Query query = em.createNamedQuery("findById").setParameter("id", id);
+        return (BankAccountEntity) query.getSingleResult();
     }
 
     @Override
-    public void updateAccount(BankAccountEntity updatedAccount) {
-        if (updatedAccount != null && updatedAccount.getId() != null) {
-            entityManager.merge(updatedAccount);
-        }
-    }
+    public boolean updateAccount(BankAccountEntity updatedAccount) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        em.find(BankAccountEntity.class, updatedAccount.getId());
+        em.merge(updatedAccount);
+        em.getTransaction().commit();
+        em.close();
 
-    @Override
-    public Optional<BankAccountEntity> updateAccountById(Integer id, double accountNumber, String accountHolderName, double balance, String accountType) {
-        BankAccountEntity account = entityManager.find(BankAccountEntity.class, id);
-        if (account != null) {
-            account.setAccountNumber(accountNumber);
-            account.setAccountHolderName(accountHolderName);
-            account.setBalance(balance);
-            account.setAccountType(accountType);
-            entityManager.merge(account);
-            return Optional.of(account);
-        }
-        return Optional.empty();
+        return true;
     }
 }
